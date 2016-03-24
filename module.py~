@@ -1,0 +1,4 @@
+from fibonacci2 import fib2
+	
+s=fibonacci2.fib2(1000)
+print s

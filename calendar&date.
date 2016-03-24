@@ -1,0 +1,154 @@
+chandan@chandan-dell:~$ PYTHON
+PYTHON: command not found
+chandan@chandan-dell:~$ python
+Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import calendar
+>>> cal=calendar.month(2008,1)
+>>> print cal
+    January 2008
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+>>> import time
+>>> t=time.asctime(time.localtime(time.time())
+... 
+... 
+... 
+... print t
+  File "<stdin>", line 5
+    print t
+        ^
+SyntaxError: invalid syntax
+>>> t=time.asctime(time.localtime(time.time()))
+>>> print t
+Sun Aug 30 00:31:35 2015
+>>> t=time.asctime(time.time())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: argument must be 9-item sequence, not float
+>>> t=time.clock(time.localtime(time.time()))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: clock() takes no arguments (1 given)
+>>> t=time.asctime(time.localtime(time.clock()))
+>>> print t
+Thu Jan  1 05:30:00 1970
+>>> t=time.localtime(time.clock()))
+  File "<stdin>", line 1
+    t=time.localtime(time.clock()))
+                                  ^
+SyntaxError: invalid syntax
+>>> t=time.localtime(time.clock())
+>>> print t
+time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=5, tm_min=30, tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0)
+>>> import time
+>>> time.gmtime(3600)
+time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=1, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0)
+>>> time.localtime()
+time.struct_time(tm_year=2015, tm_mon=8, tm_mday=30, tm_hour=1, tm_min=11, tm_sec=18, tm_wday=6, tm_yday=242, tm_isdst=0)
+>>> time.mktime(time.localtime())
+1440877306.0
+>>> import calendar
+>>> calendar.calendar(2015,w=2,i=1,c=6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: formatyear() got an unexpected keyword argument 'i'
+>>> calendar.calendar(2015,w=2,l=1,c=6)
+'                                  2015\n\n      January                   February                   March\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1                         1\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       2  3  4  5  6  7  8\n12 13 14 15 16 17 18       9 10 11 12 13 14 15       9 10 11 12 13 14 15\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      16 17 18 19 20 21 22\n26 27 28 29 30 31         23 24 25 26 27 28         23 24 25 26 27 28 29\n                                                    30 31\n\n       April                      May                       June\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                   1  2  3       1  2  3  4  5  6  7\n 6  7  8  9 10 11 12       4  5  6  7  8  9 10       8  9 10 11 12 13 14\n13 14 15 16 17 18 19      11 12 13 14 15 16 17      15 16 17 18 19 20 21\n20 21 22 23 24 25 26      18 19 20 21 22 23 24      22 23 24 25 26 27 28\n27 28 29 30               25 26 27 28 29 30 31      29 30\n\n        July                     August                  September\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                      1  2          1  2  3  4  5  6\n 6  7  8  9 10 11 12       3  4  5  6  7  8  9       7  8  9 10 11 12 13\n13 14 15 16 17 18 19      10 11 12 13 14 15 16      14 15 16 17 18 19 20\n20 21 22 23 24 25 26      17 18 19 20 21 22 23      21 22 23 24 25 26 27\n27 28 29 30 31            24 25 26 27 28 29 30      28 29 30\n                          31\n\n      October                   November                  December\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1          1  2  3  4  5  6\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       7  8  9 10 11 12 13\n12 13 14 15 16 17 18       9 10 11 12 13 14 15      14 15 16 17 18 19 20\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      21 22 23 24 25 26 27\n26 27 28 29 30 31         23 24 25 26 27 28 29      28 29 30 31\n                          30\n'
+>>> calendar.calendar(2015,w=2,l=1,c=6)
+'                                  2015\n\n      January                   February                   March\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1                         1\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       2  3  4  5  6  7  8\n12 13 14 15 16 17 18       9 10 11 12 13 14 15       9 10 11 12 13 14 15\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      16 17 18 19 20 21 22\n26 27 28 29 30 31         23 24 25 26 27 28         23 24 25 26 27 28 29\n                                                    30 31\n\n       April                      May                       June\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                   1  2  3       1  2  3  4  5  6  7\n 6  7  8  9 10 11 12       4  5  6  7  8  9 10       8  9 10 11 12 13 14\n13 14 15 16 17 18 19      11 12 13 14 15 16 17      15 16 17 18 19 20 21\n20 21 22 23 24 25 26      18 19 20 21 22 23 24      22 23 24 25 26 27 28\n27 28 29 30               25 26 27 28 29 30 31      29 30\n\n        July                     August                  September\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                      1  2          1  2  3  4  5  6\n 6  7  8  9 10 11 12       3  4  5  6  7  8  9       7  8  9 10 11 12 13\n13 14 15 16 17 18 19      10 11 12 13 14 15 16      14 15 16 17 18 19 20\n20 21 22 23 24 25 26      17 18 19 20 21 22 23      21 22 23 24 25 26 27\n27 28 29 30 31            24 25 26 27 28 29 30      28 29 30\n                          31\n\n      October                   November                  December\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1          1  2  3  4  5  6\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       7  8  9 10 11 12 13\n12 13 14 15 16 17 18       9 10 11 12 13 14 15      14 15 16 17 18 19 20\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      21 22 23 24 25 26 27\n26 27 28 29 30 31         23 24 25 26 27 28 29      28 29 30 31\n                          30\n'
+>>> calendar.calendar(2015,w=2,l=1,c=6)
+'                                  2015\n\n      January                   February                   March\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1                         1\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       2  3  4  5  6  7  8\n12 13 14 15 16 17 18       9 10 11 12 13 14 15       9 10 11 12 13 14 15\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      16 17 18 19 20 21 22\n26 27 28 29 30 31         23 24 25 26 27 28         23 24 25 26 27 28 29\n                                                    30 31\n\n       April                      May                       June\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                   1  2  3       1  2  3  4  5  6  7\n 6  7  8  9 10 11 12       4  5  6  7  8  9 10       8  9 10 11 12 13 14\n13 14 15 16 17 18 19      11 12 13 14 15 16 17      15 16 17 18 19 20 21\n20 21 22 23 24 25 26      18 19 20 21 22 23 24      22 23 24 25 26 27 28\n27 28 29 30               25 26 27 28 29 30 31      29 30\n\n        July                     August                  September\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n       1  2  3  4  5                      1  2          1  2  3  4  5  6\n 6  7  8  9 10 11 12       3  4  5  6  7  8  9       7  8  9 10 11 12 13\n13 14 15 16 17 18 19      10 11 12 13 14 15 16      14 15 16 17 18 19 20\n20 21 22 23 24 25 26      17 18 19 20 21 22 23      21 22 23 24 25 26 27\n27 28 29 30 31            24 25 26 27 28 29 30      28 29 30\n                          31\n\n      October                   November                  December\nMo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su\n          1  2  3  4                         1          1  2  3  4  5  6\n 5  6  7  8  9 10 11       2  3  4  5  6  7  8       7  8  9 10 11 12 13\n12 13 14 15 16 17 18       9 10 11 12 13 14 15      14 15 16 17 18 19 20\n19 20 21 22 23 24 25      16 17 18 19 20 21 22      21 22 23 24 25 26 27\n26 27 28 29 30 31         23 24 25 26 27 28 29      28 29 30 31\n                          30\n'
+>>> calendar.firstweekday()
+0
+>>> claendar.isleap(2016)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'claendar' is not defined
+>>> calendar.isleap(2016)
+True
+>>> calendar.isleap(2015)
+False
+>>> calendar.leapdays(2015,2016)
+0
+>>> calendar.leapdays(2005,2016)
+2
+>>> calendar.monthcalendar(205,8)
+[[0, 0, 0, 1, 2, 3, 4], [5, 6, 7, 8, 9, 10, 11], [12, 13, 14, 15, 16, 17, 18], [19, 20, 21, 22, 23, 24, 25], [26, 27, 28, 29, 30, 31, 0]]
+>>> calendar.monthcalendar(2005,8)
+[[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14], [15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28], [29, 30, 31, 0, 0, 0, 0]]
+>>> calendar.monthcalendar(2015,8)
+[[0, 0, 0, 0, 0, 1, 2], [3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16], [17, 18, 19, 20, 21, 22, 23], [24, 25, 26, 27, 28, 29, 30], [31, 0, 0, 0, 0, 0, 0]]
+>>> calendar.monthrange(2015,8)
+(5, 31)
+>>> calendar.prmonth(2015,8,w=2,l=1)
+    August 2015
+Mo Tu We Th Fr Sa Su
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31
+>>> calendar.prmonth(2015,8,w=2,l=1,c=6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: prmonth() got an unexpected keyword argument 'c'
+>>> calendar.prcal(2015,8,w=2,l=1,c=6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: pryear() got multiple values for keyword argument 'w'
+>>> calendar.prcal(2015,w=2,l=1,c=6)
+                                  2015
+
+      January                   February                   March
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+          1  2  3  4                         1                         1
+ 5  6  7  8  9 10 11       2  3  4  5  6  7  8       2  3  4  5  6  7  8
+12 13 14 15 16 17 18       9 10 11 12 13 14 15       9 10 11 12 13 14 15
+19 20 21 22 23 24 25      16 17 18 19 20 21 22      16 17 18 19 20 21 22
+26 27 28 29 30 31         23 24 25 26 27 28         23 24 25 26 27 28 29
+                                                    30 31
+
+       April                      May                       June
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+       1  2  3  4  5                   1  2  3       1  2  3  4  5  6  7
+ 6  7  8  9 10 11 12       4  5  6  7  8  9 10       8  9 10 11 12 13 14
+13 14 15 16 17 18 19      11 12 13 14 15 16 17      15 16 17 18 19 20 21
+20 21 22 23 24 25 26      18 19 20 21 22 23 24      22 23 24 25 26 27 28
+27 28 29 30               25 26 27 28 29 30 31      29 30
+
+        July                     August                  September
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+       1  2  3  4  5                      1  2          1  2  3  4  5  6
+ 6  7  8  9 10 11 12       3  4  5  6  7  8  9       7  8  9 10 11 12 13
+13 14 15 16 17 18 19      10 11 12 13 14 15 16      14 15 16 17 18 19 20
+20 21 22 23 24 25 26      17 18 19 20 21 22 23      21 22 23 24 25 26 27
+27 28 29 30 31            24 25 26 27 28 29 30      28 29 30
+                          31
+
+      October                   November                  December
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+          1  2  3  4                         1          1  2  3  4  5  6
+ 5  6  7  8  9 10 11       2  3  4  5  6  7  8       7  8  9 10 11 12 13
+12 13 14 15 16 17 18       9 10 11 12 13 14 15      14 15 16 17 18 19 20
+19 20 21 22 23 24 25      16 17 18 19 20 21 22      21 22 23 24 25 26 27
+26 27 28 29 30 31         23 24 25 26 27 28 29      28 29 30 31
+                          30
+
+>>> calendar.setfirstweekday(weekday)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'weekday' is not defined
+>>> calendar.setfirstweekday(0)
+>>> t=calendar.setfirstweekday(0)
+>>> print t
+None
+
+

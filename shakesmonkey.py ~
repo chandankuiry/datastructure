@@ -1,0 +1,4 @@
+import random
+def generateOne(strlen):
+	alphabet ='abcdefghijklmnopqrstuvwxyz '
+	res =''

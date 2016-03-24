@@ -1,0 +1,17 @@
+import random
+
+
+def generateOne(strlen):
+	alphabet ='abcdefghijklmnopqrstuvwxyz '
+	res =''
+	for i in range(strlen):
+		res =res +alphabet[random.randrange(27)];
+	return res
+
+def score(goal,teststring):
+	numsame =0
+	for i in range(len(goal)):
+		if goal[i] == teststring[i]:
+			numsame = numsame+1
+	return numsame/len(goal)
+print(score(“methinks it is like a weasel” ,generateOne(28))

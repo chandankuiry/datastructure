@@ -1,0 +1,5 @@
+import pythoncode
+
+pythoncode.pots()
+pythoncode.isdn()
+pythoncode.g3()

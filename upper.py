@@ -1,0 +1,5 @@
+d=raw_input("enter a string:")
+for i in d:
+	f=d.upper()
+print f
+

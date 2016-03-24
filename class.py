@@ -1,0 +1,9 @@
+class exampleClass:
+	eyes="blue"
+	age=22
+	def thismethod(self):
+		return "hey method worked"
+exampleobject=exampleClass() 
+print exampleobject.eyes
+print exampleobject.age
+print exampleobject.thismethod()
